@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2139002-F8CB-4841-B2B7-6B01CAD17996}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PF94chat</RootNamespace>
+    <AssemblyName>PF94chat</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CatSpeak.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts.Designer.cs">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Contacts.resx">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Branding\banneralpha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Branding\banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Branding\banner 125x125beta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Branding\banner 125x125alpha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Branding\banner 125x125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deprecated crap\AlessioIRC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\oldBanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\Wizz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\Video Call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\Unused Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\Unused Logo from 8.0.0556.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\SharingFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\Scene.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\Office2003or2007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\Gift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\Font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 8.5 stuff %28not all of them%29\Call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\yahoo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\writting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\webcam1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\webcam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\top background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\sound kill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\shandow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\pappers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\offline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\no.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\msn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\micro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\micro kill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\groupen icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\group icon large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\group ico smzll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\favorite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\emo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\emo icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\disconnect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\bing btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\bar hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\bainner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\bainner bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\bainner 125x125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\away.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\allot icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\tennis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\surfing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\sports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\ripwiishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\lights.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\guitar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\guest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\golf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\fish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\edgy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\chess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\chef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\buisness.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\bonsai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\basketball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Vehicles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Notifcations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\MessageOffline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\MessageIdle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\MessageBusy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\MSNBC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\International.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\Games.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tabs\ESPN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Misc\48188572.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\xpdog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\xm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\wut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\view_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\thinking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\sun_omg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\stuckout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\smile_really.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\smile_forced2012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\smile_forced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\smile_2012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\smile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\simly_happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\shocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\rainbow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\peace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\oldlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\not_smile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\not_happy_thinking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\no.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\mh_think.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\mh_idk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\ipod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\idkk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\frown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\crying.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\closed_eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\brokenheart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\bat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\arrest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\angry_happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\angry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\alien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticons\2012logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\whiteMSN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\redMSN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\pinkMSN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\hellMSN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\greyMSN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\greenMSN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\blockhead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\blackMSN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\aquaMSN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\OrangeMSN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\MSNpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\IRC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Branding\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Branding\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Branding\bannerbeta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\ShadedButtonIcons.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\LookAtTray.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\DisabledButtonIcons.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\ButtonIcons.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\unknown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\oldlogo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\TrayIconsShaded.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\TrayIcons.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\online ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\offline.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\offline ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\no connection.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\no connection ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\loading.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\conversation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\conversation ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\busy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\busy ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\away.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\away ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\add contact.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\sendinfo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\notconnected.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\msnsmall.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\msngreyshaded.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\msngreybig.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\msngrey.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\msnbig.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\mail.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\look.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\chatsmall.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\chatbig.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\bluemsnsmall.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\bluemsnshaded.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\bluemsnbig.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\auth.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\Info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN 2.2 stuff\Idea.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\IRC.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deprecated crap\Speak.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\web came.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WLM 2012 Stuff\stat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display Pics\placeholder.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

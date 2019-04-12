@@ -1,0 +1,13 @@
+This is were all of PF94chat's resources exist. The most important ones are "Display Pics", "Branding", "Emoticons" and "Sounds".
+
+
+TODO:
+
+Dump the WLM 2009 beta*2 Display pics.
+Dump. More. Versions. (7.5 already done)
+Find a better icon for IRC that isn't so Android-y.
+Remove the bright magenta on old bmp resources and spilt them for better use on Visual Studio.
+Figure out a way to put the display pics into a ZIPish file to save space but make it still work on Visual Studio
+
+*1: Not all of the assets. The Logitech/Logicool webcam ad included in the exe will not be included because it's not going to be used anyways.
+*2: 14.0.5027.908, that is. However did the earlier 14.0.3921.717 beta included other ones?
